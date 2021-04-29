@@ -83,7 +83,7 @@ volumes:
 ```
 ### /etc/hosts
 
-For access to your Wordpress instance, for this exemple file, to __http://yourwebsite.com__, you need to map your hosts file to redirect to 127.0.0.1. This Docker Wordpress instance run on __http://localhost__ by default.
+For access to your Wordpress instance, for this example file, to __http://yourwebsite.com__, you need to map your hosts file to redirect to 127.0.0.1. This Docker Wordpress instance run on __http://localhost__ by default.
 
 Add to your file :
 ```
