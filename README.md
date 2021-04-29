@@ -88,7 +88,7 @@ For access to your Wordpress instance, for this exemple file, to __http://yourwe
 Add to your file :
 ```
 127.0.0.1       localhost
-127.0.1.1       yourwebsite.com
+127.0.0.1       yourwebsite.com
 ```
 
 ### Build the project
@@ -99,6 +99,8 @@ docker-compose up --build
 ```
 
 And access to [http://yourwebsite.com](http://yourwebsite.com)
+
+PhpMyAdmin is accessible to [http://yourwebsite.com:8082](http://yourwebsite.com:8082)
 
 Next time you can run your project with the command:
 ```sh
