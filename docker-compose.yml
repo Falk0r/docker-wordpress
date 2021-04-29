@@ -1,0 +1,43 @@
+services:
+    mysql:
+        image: mysql:5.7
+        restart: always
+        environment:
+            MYSQL_DATABASE: ${nom_database}
+            MYSQL_USER: ${nom_user}
+            MYSQL_PASSWORD: ${db_password}
+            MYSQL_RANDOM_ROOT_PASSWORD: 1
+            MYSQL_ROOT_PASSWORD: password
+        volumes:
+            - ./database/data.sql:/docker-entrypoint-initdb.d/data.sql
+                
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        depends_on: 
+            - mysql
+        ports: 
+        - "8082:80"
+        environment: 
+            - PMA_USER=${nom_user}
+            - PMA_PASSWORD=${db_password}
+            - UPLOAD_LIMIT=300M
+            
+    wordpress:
+        depends_on:
+            - mysql
+        image: wordpress:${wp_version}
+        restart: always
+        ports:
+            - 80:80
+        environment:
+            WORDPRESS_DB_HOST: mysql:3306
+            WORDPRESS_DB_USER: ${nom_user}
+            WORDPRESS_DB_PASSWORD: ${db_password}
+            WORDPRESS_DB_NAME: ${nom_database}
+        volumes:
+            # - ./wordpress/wp-content/themes:/var/www/html/wp-content/themes
+            # - ./wordpress/wp-content/plugins:/var/www/html/wp-content/plugins
+            # - ./wordpress/wp-content/uploads:/var/www/html/wp-content/uploads
+            # - ./wordpress/wp-config.php:/var/www/html/wp-config.php
+            - ./wordpress/:/var/www/html/
+        restart: always
