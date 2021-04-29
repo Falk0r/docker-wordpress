@@ -1,7 +1,8 @@
 # Server Wordpress with PhpMyAdmin
 
+<div style="text-align:center">
 <img alt="Docker" src="https://banck.net/wp-content/uploads/2015/08/Wordpress_Docker.png" height="300">
-
+</div>
 This project is docker compose installation of a single site Wordpress instance for development using Mysql and PhpMyAdmin.
 
 ## For existing Wordpress import
