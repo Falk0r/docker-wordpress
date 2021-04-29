@@ -1,4 +1,6 @@
+<p align="center">
 # Server Wordpress with PhpMyAdmin
+</p>
 
 <p align="center">
 <img alt="Docker" src="https://banck.net/wp-content/uploads/2015/08/Wordpress_Docker.png" height="300">
