@@ -36,11 +36,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 Replace __${nom_database}__, __${nom_user}__, __${db_password}__ for your values.
 ```yml
 environment:
-            MYSQL_DATABASE: ${nom_database}
-            MYSQL_USER: ${nom_user}
-            MYSQL_PASSWORD: ${db_password}
-            MYSQL_RANDOM_ROOT_PASSWORD: 1
-            MYSQL_ROOT_PASSWORD: password
+    MYSQL_DATABASE: ${nom_database}
+    MYSQL_USER: ${nom_user}
+    MYSQL_PASSWORD: ${db_password}
+    MYSQL_RANDOM_ROOT_PASSWORD: 1
+    MYSQL_ROOT_PASSWORD: password
 ```
 
 For import your database, replace __data.sql__ by the name of your sql file:
